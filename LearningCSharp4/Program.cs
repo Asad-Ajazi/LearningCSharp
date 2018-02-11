@@ -10,6 +10,13 @@ namespace LearningCSharp4
     {
         static void Main(string[] args)
         {
+            int x = 1;
+            while (x<4)
+            {
+                Console.WriteLine("basic while loop");
+                x++;
+            }
+            Console.WriteLine("end of loop");
         }
     }
 }
