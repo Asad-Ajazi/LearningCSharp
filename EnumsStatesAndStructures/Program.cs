@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearningCSharp4
+namespace EnumsStatesAndStructures
 {
     //Enumeration and states 4.2.1. 
     //Enums hold a certain value that we predefine
     //use enums to gold things that have limited values.
 
-        enum AccountState
+    enum AccountState
     {
-        New,Active,UnderAudit,Frozen,Closed
+        New, Active, UnderAudit, Frozen, Closed
     }
 
     //struct essential acts as a database table and links fields together.
@@ -27,13 +27,12 @@ namespace LearningCSharp4
 
     }
 
-    //testing page - transfer code to new project with appropriate title.
     class Program
     {
         //method that uses strut array value in call.
         public static void PrintAccount(Account a)
         {
-            Console.WriteLine("name: {0}.",a.Name);
+            Console.WriteLine("name: {0}.", a.Name);
             Console.WriteLine("Address: {0}.", a.Address);
             Console.WriteLine("Balance: {0}.", a.Balance);
         }
@@ -61,13 +60,10 @@ namespace LearningCSharp4
             Bank[1].Balance = 0;
             PrintAccount(Bank[1]);
 
-            
+
             Console.WriteLine("all done");
 
 
         }
-
-        
-
     }
 }
