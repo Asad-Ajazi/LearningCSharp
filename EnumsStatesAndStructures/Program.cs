@@ -15,7 +15,7 @@ namespace EnumsStatesAndStructures
         New, Active, UnderAudit, Frozen, Closed
     }
 
-    //struct essential acts as a database table and links fields together.
+    //struct essentially acts as a database table and links fields together.
     struct Account
     {
         public AccountState State;
@@ -35,6 +35,7 @@ namespace EnumsStatesAndStructures
             Console.WriteLine("name: {0}.", a.Name);
             Console.WriteLine("Address: {0}.", a.Address);
             Console.WriteLine("Balance: {0}.", a.Balance);
+            Console.WriteLine("state: {0}",a.State);
         }
 
 
