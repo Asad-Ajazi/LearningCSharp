@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningCSharp4", "Learning
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumsStatesAndStructures", "EnumsStatesAndStructures\EnumsStatesAndStructures.csproj", "{D615ED0F-3109-4513-A30D-504FD5A2B28C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingConsole", "TestingConsole\TestingConsole.csproj", "{CE38EDCD-5FEA-46AF-8485-505B9ED57B73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D615ED0F-3109-4513-A30D-504FD5A2B28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D615ED0F-3109-4513-A30D-504FD5A2B28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D615ED0F-3109-4513-A30D-504FD5A2B28C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE38EDCD-5FEA-46AF-8485-505B9ED57B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE38EDCD-5FEA-46AF-8485-505B9ED57B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE38EDCD-5FEA-46AF-8485-505B9ED57B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE38EDCD-5FEA-46AF-8485-505B9ED57B73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
