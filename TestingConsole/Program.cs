@@ -7,23 +7,29 @@ using System.Threading.Tasks;
 namespace TestingConsole //will be used to test small sections of code.
 {
 
-    class Account
+    class Person
     {
-        public string name;
-
+        public string userName;
+        string favFood;
+        int age;
+        bool good;
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Account RobA = new Account();
-            RobA.name = "rob";
-            Console.WriteLine(RobA.name);
 
-            RobA = new Account();
-            RobA.name = "tempjim";
-            Console.WriteLine(RobA.name);
+            Person John = new Person()
+            {
+                userName = "John",
+                
+            };
+
+
+            
+
+
 
         }
     }
