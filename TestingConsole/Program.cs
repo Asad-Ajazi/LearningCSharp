@@ -12,6 +12,10 @@ namespace TestingConsole //will be used to test small sections of code.
         private decimal balance = 0;
         public static decimal interestCharged = 20;
 
+        //static members can be used by static methods, non static members cannot.
+        private static decimal minIncome = 10000;
+        private static int minAge = 18;
+
         //pubilc method inside the class. allows access to private fields in main method.
         public bool WithdrawFunds(decimal amount)
         {
@@ -22,22 +26,35 @@ namespace TestingConsole //will be used to test small sections of code.
             balance = balance - amount;
             return true;
         }
-
+        //pays in funds method
         public void PayInFunds(decimal amount)
         {
             balance += amount;
         }
-
+        //get balance method
         public decimal GetBalance()
         {
             return balance;
         }
-
+        //a static balance for testing purposes.
         public static decimal StaticBalance()
         {
             decimal balance = 444;
             return balance;
         }
+        //page 100 account allowed, static method.
+        public static bool AccountAllowed(decimal income, int age)
+        {
+            if ((income >= minIncome) && (age >= minAge))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
     }
 
@@ -45,6 +62,12 @@ namespace TestingConsole //will be used to test small sections of code.
     {
         static void Main(string[] args)
         {
+            //using a static method.
+            if (Account.AccountAllowed(25000, 21))
+            {
+                Console.WriteLine("account allowed");
+            }
+
 
             Account John = new Account();
 
@@ -61,9 +84,9 @@ namespace TestingConsole //will be used to test small sections of code.
             else Console.WriteLine("test successful, balance was paid");
             John.PayInFunds(500);
 
-           
-            Console.WriteLine("Current Balance is: {0}",John.GetBalance());
-            Console.WriteLine( "Static method balance is {0}", Account.StaticBalance());
+
+            Console.WriteLine("Current Balance is: {0}", John.GetBalance());
+            Console.WriteLine("Static method balance is {0}", Account.StaticBalance());
 
             Console.WriteLine("current interest charged {0}", Account.interestCharged);
             Account.interestCharged += 15;
