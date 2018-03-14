@@ -37,7 +37,7 @@ namespace UsingFiles
 
             //loop through till the end of the end of stream is reached.
             Console.WriteLine("while loop read");
-            
+
             StreamReader EOL = new StreamReader(path);
             while (EOL.EndOfStream == false)
             {

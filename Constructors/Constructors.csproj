@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D94078EC-D374-4922-9B50-FB46E39AC880}</ProjectGuid>
+    <ProjectGuid>{D684F91D-FF76-4652-80F8-C02E1F6832AD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>UsingFiles</RootNamespace>
-    <AssemblyName>UsingFiles</AssemblyName>
+    <RootNamespace>Constructors</RootNamespace>
+    <AssemblyName>Constructors</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="IAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
