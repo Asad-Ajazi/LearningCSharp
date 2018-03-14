@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "..\..\..\laptop\t\Constructors\Constructors.csproj", "{32BA8304-03D1-4B4E-8FE7-29477ECCC519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "..\..\..\laptop\t\Delegates\Delegates.csproj", "{E97353DF-5B51-4AE3-99F2-C1067EBC1C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsAndErrors", "..\..\..\laptop\t\ExceptionsAndErrors\ExceptionsAndErrors.csproj", "{DBB5669B-832F-4786-8F3C-9175AF272193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{32BA8304-03D1-4B4E-8FE7-29477ECCC519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32BA8304-03D1-4B4E-8FE7-29477ECCC519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32BA8304-03D1-4B4E-8FE7-29477ECCC519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97353DF-5B51-4AE3-99F2-C1067EBC1C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97353DF-5B51-4AE3-99F2-C1067EBC1C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97353DF-5B51-4AE3-99F2-C1067EBC1C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97353DF-5B51-4AE3-99F2-C1067EBC1C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB5669B-832F-4786-8F3C-9175AF272193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB5669B-832F-4786-8F3C-9175AF272193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB5669B-832F-4786-8F3C-9175AF272193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB5669B-832F-4786-8F3C-9175AF272193}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
