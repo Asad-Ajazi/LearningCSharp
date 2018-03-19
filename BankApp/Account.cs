@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
-    class Account
+    public abstract class Account : IAccount
     {
 
         private string name;
         private string address;
-        private decimal balance;
+        private decimal balance =0;
+        public abstract string RudeLetterString();
+
 
         public Account(string inName, string inAddress, decimal inBalance)
         {
@@ -27,6 +29,30 @@ namespace BankApp
         public Account(string inName) :
             this(inName, "not supplied", 0)
         {
+        }
+
+
+
+
+
+        public virtual bool WithdrawFunds(decimal amount)
+        {
+            if (balance<amount)
+            {
+                return false;
+            }
+            balance -= amount;
+            return true;
+        } //end WithdrawFunds.
+
+        public void PayInFunds(decimal amount)
+        {
+            balance += amount;
+        }
+
+        public decimal GetBalance()
+        {
+            return balance;
         }
 
     }
