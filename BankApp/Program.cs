@@ -8,6 +8,7 @@ namespace BankApp
 {
     class Program
     {
+        //edit notes
         static void Main(string[] args)
         {
             const int MAX_CUST = 100;
