@@ -11,9 +11,7 @@ namespace BankApp
         //edit notes
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.WriteLine("change testing");
-=======
+
             const int MAX_CUST = 100;
             IAccount[] accs = new IAccount[MAX_CUST];
             //accs[0] = new Account("rob");
@@ -40,7 +38,6 @@ namespace BankApp
             Console.WriteLine("b bal after:" + b.GetBalance());
 
 
->>>>>>> 5a118b7f20b6510d23c1fc3978b7c835ec1e1ace
         }
     }
 }
