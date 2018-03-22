@@ -12,5 +12,6 @@ namespace BankApp
         bool WithdrawFunds(decimal amount);
         decimal GetBalance();
         string RudeLetterString();
+        string GetName(string _name);
     }
 }

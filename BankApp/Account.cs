@@ -10,6 +10,7 @@ namespace BankApp
     {
 
         private string name;
+        public string _name;
         private string address;
         private decimal balance =0;
         public abstract string RudeLetterString();
@@ -29,6 +30,12 @@ namespace BankApp
         public Account(string inName) :
             this(inName, "not supplied", 0)
         {
+        }
+
+        public string GetName(string _name)
+        {
+            this.name = _name;
+            return name;
         }
 
 
