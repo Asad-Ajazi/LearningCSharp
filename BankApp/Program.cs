@@ -26,7 +26,7 @@ namespace BankApp
                 Console.WriteLine("account added");
             }
 
-            IAccount storedAccount = ourbank.FindAccount("Rosssb");
+            IAccount storedAccount = ourbank.FindAccount("Tam");
             if (storedAccount!=null)
             {
                 Console.WriteLine("Account found in bank");

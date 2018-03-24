@@ -32,9 +32,8 @@ namespace BankApp
         {
         }
 
-        public string GetName(string _name)
-        {
-            this.name = _name;
+        public string GetName()
+        {            
             return name;
         }
 

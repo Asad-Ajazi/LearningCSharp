@@ -23,7 +23,7 @@ namespace BankApp
                 {
                     continue;
                 }
-                if (accounts[i].GetName(_name)==)
+                if (accounts[i].GetName() == _name )
                 {
                     Console.WriteLine("was true");
                     return accounts[i];
