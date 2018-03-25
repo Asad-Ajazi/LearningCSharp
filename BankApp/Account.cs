@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
-    public abstract class Account : IAccount
+    public class Account : IAccount
     {
 
         private string name;
         public string _name;
         private string address;
         private decimal balance =0;
-        public abstract string RudeLetterString();
+        public virtual string RudeLetterString()
+        {
+            return "rudelettersstringmethod.";
+        }
 
 
         public Account(string inName, string inAddress, decimal inBalance)
@@ -37,7 +40,7 @@ namespace BankApp
             return name;
         }
 
-
+        
 
 
 

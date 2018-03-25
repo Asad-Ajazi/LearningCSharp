@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,34 @@ namespace BankApp
             {
                 Console.WriteLine("hash Account found in bank");
             }
+
+            Console.WriteLine("newwwwwwwwwwwwwww \\n");
+
+            //Using arraylists
+            ArrayList store = new ArrayList();
+
+            
+            Account robsaccout = new Account("robsacc");
+            store.Add(robsaccout);
+            Account a = (Account) store[0];
+            Console.WriteLine(a.GetBalance());
+
+            a.PayInFunds(500);          
+            Console.WriteLine(a.GetBalance());
+
+            if (store.Contains(robsaccout))
+            {
+                Console.WriteLine("rob is in the bank");
+            }
+
+            store.Remove(a);
+
+            if (store.Count == 0)
+            {
+                Console.WriteLine("arraylist empty");
+            }
+
+
 
         }
     }
