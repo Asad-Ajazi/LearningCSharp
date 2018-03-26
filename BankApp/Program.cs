@@ -16,8 +16,8 @@ namespace BankApp
             
 
             ArrayBank ourbank = new ArrayBank(100);
-            IAccount newAccount = new CustomerAccount("Rob","add",10000);
-            IAccount anewAccount = new CustomerAccount("Tom", "add", 10000);
+            IAccount newAccount = new CustomerAccount("Rob",10000);
+            IAccount anewAccount = new CustomerAccount("Tom", 10000);
 
             if (ourbank.StoreAccount(anewAccount) == true)
             {
@@ -38,8 +38,8 @@ namespace BankApp
             //testing hashtables.
             HashBank hbank = new HashBank();
 
-            IAccount jimAcc = new CustomerAccount("Jim", "add", 10000);
-            IAccount joeAcc = new CustomerAccount("Joe", "housing place", 400);
+            IAccount jimAcc = new CustomerAccount("Jim", 10000);
+            IAccount joeAcc = new CustomerAccount("Joe",400);
 
             hbank.StoreAccount(jimAcc);
             hbank.StoreAccount(joeAcc);
@@ -96,7 +96,26 @@ namespace BankApp
                 Console.WriteLine("rob is here his balance is: " +accountDictionary["robsacc"].GetBalance());
             }
 
-            
+            //saving an account to a text file.
+            CustomerAccount emAcc = new CustomerAccount("em", 400);
+            if (emAcc.Save("outputFile.txt"))
+            {
+                Console.WriteLine("saved ok");
+            }
+            else
+            {
+                Console.WriteLine("didn't save");
+            }
+            //reading the saved account.
+            CustomerAccount loaded = CustomerAccount.Load("outputfile.txt");
+            Console.WriteLine(loaded.GetName());
+
+            //"factory" method, check if null was returned to see if errors occured.
+            CustomerAccount test = CustomerAccount.Load("outputfile.txt");
+            if (test==null)
+            {
+                Console.WriteLine("load failed");
+            }
         }
     }
 }

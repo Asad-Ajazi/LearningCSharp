@@ -10,8 +10,7 @@ namespace BankApp
     {
         void PayInFunds(decimal amount);
         bool WithdrawFunds(decimal amount);
-        decimal GetBalance();
-        string RudeLetterString();
+        decimal GetBalance();        
         string GetName();
     }
 }
