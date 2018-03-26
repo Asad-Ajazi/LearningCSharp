@@ -13,10 +13,7 @@ namespace BankApp
         public string _name;
         private string address;
         private decimal balance =0;
-        public virtual string RudeLetterString()
-        {
-            return "rudelettersstringmethod.";
-        }
+
 
 
         public Account(string inName, string inAddress, decimal inBalance)

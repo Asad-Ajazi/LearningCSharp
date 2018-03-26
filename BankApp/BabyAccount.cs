@@ -21,10 +21,7 @@ namespace BankApp
             }            
             return base.WithdrawFunds(amount); //base refers to partent method
         } //end WithdrawFunds.
-        public override string RudeLetterString()
-        {
-            return "Tell your parents you ran out of money.";
-        }
+
 
 
 

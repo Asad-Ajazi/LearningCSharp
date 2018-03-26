@@ -96,7 +96,7 @@ namespace BankApp
                 Console.WriteLine("rob is here his balance is: " +accountDictionary["robsacc"].GetBalance());
             }
 
-            //saving an account to a text file.
+            //saving single account to a text file.
             CustomerAccount emAcc = new CustomerAccount("em", 400);
             if (emAcc.Save("outputFile.txt"))
             {
@@ -106,16 +106,29 @@ namespace BankApp
             {
                 Console.WriteLine("didn't save");
             }
-            //reading the saved account.
-            CustomerAccount loaded = CustomerAccount.Load("outputfile.txt");
-            Console.WriteLine(loaded.GetName());
+            //reading the single saved account.
+            //CustomerAccount loaded = CustomerAccount.Load();
+            //Console.WriteLine(loaded.GetName());
 
             //"factory" method, check if null was returned to see if errors occured.
-            CustomerAccount test = CustomerAccount.Load("outputfile.txt");
-            if (test==null)
-            {
-                Console.WriteLine("load failed");
-            }
+            //CustomerAccount test = CustomerAccount.Load();
+            //if (test==null)
+            //{
+            //    Console.WriteLine("load failed");
+            //}
+
+            //using streams to save multiple accounts based on dictionaries.
+
+            //DictionaryBank myBank = new DictionaryBank();
+            //Account acc1 = new Account("bobby","a",45);
+
+            //if (myBank.StoreAcount(acc1) == true)
+            //{
+            //    Console.WriteLine("Account added to bank");
+                
+            //}
+
+
         }
     }
 }

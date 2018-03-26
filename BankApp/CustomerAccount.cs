@@ -51,24 +51,35 @@ namespace BankApp
         }
 
         //adding a save method. (text file in this case. databases would be much better.)
+        //for single account
         public bool Save (string filename)
         {
+            textOut = null;
             try
             {
-                TextWriter outText = new StreamWriter(filename);
-                outText.WriteLine(name);
-                outText.WriteLine(balance);
-                outText.Close();
+                textOut = new StreamWriter(filename);
+                Save(textOut);
             }
             catch
             {
                 return false;
             }
+            finally
+            {
+                if (textOut != null)
+                {
+                    textOut.Close();
+                }
+            }
             return true;
         }
 
         //loading the text file.
-        public static CustomerAccount Load(string filename)
+        //for single account
+
+            
+        //changing the load method to read from the textreader.
+        /*public static CustomerAccount Load(string filename)
         {
             CustomerAccount result = null;
             TextReader textIn = null;
@@ -93,10 +104,44 @@ namespace BankApp
                 }                
             }
             return result;
+        }*/
 
-
+            //new load method. using text streams.
+            public static CustomerAccount Load(TextReader textIn)
+        {
+            CustomerAccount result = null;
+            try
+            {
+                string name = textIn.ReadLine();
+                string balanceText = textIn.ReadLine();
+                decimal balance = decimal.Parse(balanceText);
+                result = new CustomerAccount(name, balance);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            return result;
         }
 
+        //using a stream to save multiple accounts. is passed into older save method with same name.(overloading.)
+        TextWriter textOut = new StreamWriter("test.txt");
+
+        public void Save(TextWriter textOut)
+        {
+            textOut.WriteLine(name);
+            textOut.WriteLine(balance);
+        }
+
+        //p153 saving/loading accounts. -- put into HashBank class.
+        //public void Save(TextWriter textOut)
+        //{
+        //    textOut.WriteLine(bankHashtable.Count);
+        //    foreach (CustomerAccount account in bankHashtable.Values)
+        //    {
+        //        account.Save(textOut);
+        //    }
+        //}
 
 
 
