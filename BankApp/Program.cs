@@ -57,8 +57,8 @@ namespace BankApp
 
             
             Account robsaccout = new Account("robsacc");
-            store.Add(robsaccout);
-            Account a = (Account) store[0];
+            store.Add(robsaccout); //add robsacc to arraylist
+            Account a = (Account) store[0]; //store robsacc in a
             Console.WriteLine(a.GetBalance());
 
             a.PayInFunds(500);          
@@ -76,8 +76,27 @@ namespace BankApp
                 Console.WriteLine("arraylist empty");
             }
 
+            //Using List
+            //similar to arraylist but typesafe.
+            List<Account> accountList = new List<Account>();
+            accountList.Add(robsaccout);
+            accountList[0].PayInFunds(99);
+            
+            Console.WriteLine("List balance :{0}",accountList[0].GetBalance());
 
+            //using dictionary
+            //similar to hashtable.
+            Dictionary<string, Account> accountDictionary = new Dictionary<string, Account>();
+            accountDictionary.Add("robsacc", robsaccout);
 
+            if (accountDictionary.ContainsKey("robsacc")) 
+            {
+                accountDictionary["robsacc"].PayInFunds(288);
+
+                Console.WriteLine("rob is here his balance is: " +accountDictionary["robsacc"].GetBalance());
+            }
+
+            
         }
     }
 }
