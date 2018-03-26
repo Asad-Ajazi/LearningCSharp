@@ -9,7 +9,7 @@ namespace BankApp
 {
     class Program
     {
-        //edit notes
+        //edit notes, completed for nowl
         static void Main(string[] args)
         {
 
