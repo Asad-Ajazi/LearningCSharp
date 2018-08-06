@@ -1,2 +1,2 @@
 # LearningCSharp
-Continue learning - section 4+ from 'C# programming Yellow book' by Rob Miles //First time using github
+First project on github, Used Rob Miles "C# programming the yellow book" to learn how to use different features of C# to build a banking application.
